@@ -1,5 +1,5 @@
 # tbjers/dot-tmux
-Just a bunch of dotfiles.
+My tmux dotfiles, [ellipsis][ellipsis] compatible.
 
 ## Install
 Clone and symlink or install with [ellipsis][ellipsis]:

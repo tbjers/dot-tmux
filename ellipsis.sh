@@ -1,24 +1,16 @@
 #!/usr/bin/env bash
 #
-# tbjers/dot-tmux ellipsis package
+# tbjers/dot-zsh ellipsis package
 
-# The following hooks can be defined to customize behavior of your package:
-# pkg.install() {
-#     fs.link_files $PKG_PATH
-# }
+pkg.link() {
+  fs.link_files common
 
-# pkg.push() {
-#     git.push
-# }
-
-# pkg.pull() {
-#     git.pull
-# }
-
-# pkg.installed() {
-#     git.status
-# }
-#
-# pkg.status() {
-#     git.diffstat
-# }
+  case $(os.platform) in
+    osx)
+      fs.link_files platform/osx
+      ;;
+    linux)
+      fs.link_files platform/linux
+      ;;
+  esac
+}

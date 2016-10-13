@@ -14,3 +14,7 @@ pkg.link() {
       ;;
   esac
 }
+
+pkg.install() {
+  ellipsis install ellipsis-tpm
+}
